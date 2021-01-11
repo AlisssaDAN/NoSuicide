@@ -18,6 +18,7 @@ window.onload = () => {
 
     window.addEventListener("mousemove", mouseMove)
     window.addEventListener("click" , changeLight)
+    
 
     function changeLight(){
         mask.style.opacity = 0
@@ -27,12 +28,21 @@ window.onload = () => {
         //     mask.style.opacity = 0
         // }
         
+       
+
         setTimeout(()=>{
             document.querySelector("#homeDef1").style.opacity = 1
         },1500)
         setTimeout(()=>{
             document.querySelector("#homeDef2").style.opacity = 1
-        },1500)    
+        },1500)  
+        
+        setTimeout(function(){
+            //...
+            document.querySelector("#video").style.opacity = 1
+        },3600)
+
+        document.querySelector("#video video").play()
 
     }
 
@@ -44,6 +54,8 @@ window.onload = () => {
         mask.style.top = -e.clientY / 2 + "px"
     }
 
+    function trailer(){
 
+    }
 
 }
